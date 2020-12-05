@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>People page</title>
+<link href="people style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class="navigation-bar">
+        <div id="navigation-container">
+			 <ul>
+            <img src="logo.png" alt="logo.png"> 
+           <li><a href="https://keen-jones-6380dc.netlify.app/" target="_blank">About</a></li>
+ <li><a href="https://tender-edison-c8b1dc.netlify.app/" target="_blank">Contact</a></li>
+<li><a href="https://nervous-knuth-c6284a.netlify.app/" target="_blank">Travel</a></li>
+<li><a href="https://epic-albattani-3d137e.netlify.app/" target="_blank">people</a></li>
+ <li><a href="https://trusting-jepsen-d43722.netlify.app/" target="_blank">Home</a></li>
+              </ul>
+        </div>
+		
+		
+		<div class="Header">
+	<div> <h1>People</h1>
+	</div>
+	</div>
+	
+		    <div class="gallery" id="gallery">
+        <div class="gallery-item">
+            <div class="content"><img src="bluesummer_01.jpg" alt="" width="350px"></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="bluesummer_02.jpg" alt="" width="200px"> </div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="bluesummer_03.jpg" alt="" width="250px"></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="pinkdream_01.jpg" alt="" width="300px"></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="pinkdream_02.jpg" alt="" width="250px"></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="bwcity_01.jpg" alt="" width="300px"></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="bwcity_03.jpg" alt="" width="350px"></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="bwcity_02.jpg" alt="" width="300px"></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="summerfields_01.jpg" alt="" width="250px"></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="summerfields_02.jpg" alt="" width="250px"></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="summerfields_03.jpg" alt="" width="300px"></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="rushhour_01.jpg" alt="" width="250px"></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="rushhour_02.jpg" alt="" width="350px"></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="goldenhour_01.jpg" alt="" width="200px"></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="goldenhour_02.jpg" alt="" width="250px"></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="goldensun_01.jpg" alt="" width="300px"></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="rainydays_01.jpg"  alt="" width="350px"></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="rainydays_02.jpg" alt="" width="300px"></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="rainydays_03.jpg" alt="" width="250px"></div>
+        </div>
+
+    </div>
+     </div>
+	
+</body>
+		<script> gallery = document.querySelector('#gallery');
+var getVal = function (elem, style) { return parseInt(window.getComputedStyle(elem).getPropertyValue(style)); };
+var getHeight = function (item) { return item.querySelector('.content').getBoundingClientRect().height; };
+var resizeAll = function () {
+    var altura = getVal(gallery, 'grid-auto-rows');
+    var gap = getVal(gallery, 'grid-row-gap');
+    gallery.querySelectorAll('.gallery-item').forEach(function (item) {
+        var el = item;
+        el.style.gridRowEnd = "span " + Math.ceil((getHeight(item) + gap) / (altura + gap));
+    });
+};
+gallery.querySelectorAll('img').forEach(function (item) {
+    item.classList.add('byebye');
+    if (item.complete) {
+        console.log(item.src);
+    }
+    else {
+        item.addEventListener('load', function () {
+            var altura = getVal(gallery, 'grid-auto-rows');
+            var gap = getVal(gallery, 'grid-row-gap');
+            var gitem = item.parentElement.parentElement;
+            gitem.style.gridRowEnd = "span " + Math.ceil((getHeight(gitem) + gap) / (altura + gap));
+            item.classList.remove('byebye');
+        });
+    }
+});
+window.addEventListener('resize', resizeAll);
+gallery.querySelectorAll('.gallery-item').forEach(function (item) {
+    item.addEventListener('click', function () {        
+        item.classList.toggle('full');        
+    });
+});
+
+	
+	</script>
+</html>
