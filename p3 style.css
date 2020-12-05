@@ -1,0 +1,87 @@
+@charset "utf-8";
+/* CSS Document */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+body {
+  background-image: url('back 1.jpg');
+	background-repeat: no-repeat;
+background-size: 100%, 100%;
+	  background-attachment: fixed;
+
+	}
+
+	
+ul {
+  list-style-type: none;
+	margin-top: 20px;
+	margin-right: 50px;
+	margin-left: 50px;
+	font-family: "Sansita Swashed Medium";
+	
+	
+	
+
+	 padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: inline;
+  padding: 15px;
+}
+
+a { color: #FFFFFF;
+	text-decoration: none;
+}
+
+h1 {text-align: center;
+font-family: Molle ;
+color: #FFFFFF;
+font-size: 100pt;
+	padding:20;
+	margin: 0;
+	
+}
+
+h2 {text-align: center;
+font-family:"Oleo Script";
+color: #FFFFFF;
+	font-size: 55pt;
+	padding:0;
+	margin:0;
+	
+}
+
+p {text-align: center;
+	font-family: Amiri;
+	color: #FFFFFF;
+	font-size: 20pt;
+	padding:5;
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+
+button {
+	background-color:lightslategrey;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 500px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	cursor: pointer;
+	font-family: "Oleo Script";
+	font-size:30pt;
+}
+
+
