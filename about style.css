@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+  background-image: url('about back.jpg');
+	background-repeat: no-repeat;
+background-size: 100%, 100%;
+	  background-attachment: fixed;
+
+	}
+
+	
+ul {
+  list-style-type: none;
+	margin-top: 20px;
+	margin-right: 50px;
+	margin-left: 50px;
+	font-family: "Sansita Swashed Medium";
+	
+	
+	
+
+	 padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: inline;
+  padding: 15px;
+}
+
+a { color: #FFFFFF;
+	text-decoration: none;
+}
+
+h1 {text-align: center;
+font-family: Molle ;
+color: #FFFFFF;
+font-size: 100pt;
+	padding:20;
+	margin: 0;
+	
+}
+
+.column {
+  float: left;
+  width: 50%;
+	margin-left: 90px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+p {text-align:left;
+	font-family: Amiri;
+	color: #FFFFFF;
+	font-size: 20pt;
+	padding:5;
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+
+
+
+@media (max-width: 1024px){
+	img{width: 400px;
+	}
+	}
+
+@media (max-width: 375px){
+	img{width: 5px;
+}
+}
